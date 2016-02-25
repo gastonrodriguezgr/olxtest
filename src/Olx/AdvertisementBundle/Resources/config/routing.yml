@@ -1,0 +1,6 @@
+olx_advertisement_homepage:
+    path:     /
+    defaults: { _controller: OlxAdvertisementBundle:Page:index }
+olx_advertisement_listado:
+    path:     /{search}
+    defaults: { _controller: OlxAdvertisementBundle:Page:search }
