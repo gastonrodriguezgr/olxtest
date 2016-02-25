@@ -1,13 +1,92 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <title>{% block title %}Rodriguez Gaston Olx-test{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <!--theme-style-->
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'><!--//fonts-->
+    <!-- start menu -->
+    <link href="/css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/memenu.js"></script>
+    <script>$(document).ready(function(){$(".memenu").memenu();});</script>
+    <script src="/js/simpleCart.min.js"> </script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArHYA7KDg8rCBLmImfp-m_XW2soFcWhWE&language=es"></script>
+</head>
+<body>
+<!--header-->
+<div class="header">
+    <div class="header-top">
+        <div class="container">
+            <div class="social" style="color:#FFF"><span>Olx Test - Rodríguez Gastón Eduardo</span></div>
+            <div class="header-left">
+
+                <div class="search-box">
+                    <div id="sb-search" class="sb-search">
+                        <form action="" method="POST">
+                            <input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+                            <input class="sb-search-submit" type="submit" value="">
+                            <span class="sb-icon-search"> </span>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- search-scripts -->
+                <script src="/js/classie.js"></script>
+                <script src="/js/uisearch.js"></script>
+                <script>
+                    new UISearch( document.getElementById( 'sb-search' ) );
+                </script>
+                <!-- //search-scripts -->
+                <div class="clearfix"> </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="head-top">
+            <div class="logo">
+                <h1><a href="/">Rodriguez Gaston Olx-test</a></h1>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!-- products -->
+<!-- grow -->
+{% block body %}{% endblock %}
+
+<!-- products -->
+<div class="footer">
+    <div class="container">
+        <div class="footer-top-at">
+            <div class="col-md-3 amet-sed ">
+                <h4>CONTACTO</h4>
+                <p>Rodríguez Gastón Eduardo</p>
+                <p>gastonrodri@gmail.com</p>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <div class="footer-class">
+        <p>© 2016 Rodríguez Gastón Eduardo</p>
+    </div>
+</div>
+{% block javascripts %}{% endblock %}
+</body>
 </html>
