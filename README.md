@@ -13,7 +13,7 @@ _**Creating the proyect**_
 
 _**Configuration**_
 If you are on local, set a virtualhost
-	<VirtualHost *:80>
+	</ VirtualHost *:80>
         ServerAdmin webmaster@localhost
         ServerName dev.olxtest.com.ar
         DocumentRoot "/var/www/TU_DIRECTORIO_PROYECTO/web/"
