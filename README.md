@@ -8,7 +8,7 @@ More details requirements [Symfony 2.8.2](http://symfony.com/doc/current/book/in
 
 ## INSTALATION AND CONFIGURATION
 _**Creating the proyect**_
-1. Do Git co from https://github.com/gastonrodriguezgr/olxtest.git to your local (E.G /var/www/olxapp)
+> 1. Do Git co from https://github.com/gastonrodriguezgr/olxtest.git to your local (E.G /var/www/olxapp)
 2. Set apache permissions on log and cache folders. http://symfony.es/documentacion/como-solucionar-el-problema-de-los-permisos-de-symfony2/
 
 _**Configuration**_
