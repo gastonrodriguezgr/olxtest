@@ -1,0 +1,49 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}{{ titulo }}{% endblock %}
+
+{% block body %}
+    <!-- products -->
+    <!-- grow -->
+    <div class="grow">
+        <div class="container">
+            <h2>{{ titulo }}-{{ total }} Resultados</h2>
+        </div>
+    </div>
+    <!-- grow -->
+    <div class="pro-du">
+        <div class="container">
+            <div class="col-md-9 product1">
+                {% for advertisement in pagination %}
+                    {{ render( controller('OlxAdvertisementBundle:Component:itemListado',{'item':advertisement}) ) }}
+                {% else %}
+                    No hay resultados en esta lista
+                {% endfor %}
+
+                <div class=" bottom-product">
+                    {{ knp_pagination_render(pagination) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block javascripts %}
+    <script type="text/javascript">
+//        $(document).ready(function(){
+//            alert('hola');
+            function load_map(id, lat, long) {
+                var myLatlng = new google.maps.LatLng(lat,long);
+                var myOptions = {
+                    zoom: 5,
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                map = new google.maps.Map($("#map_canvas"+id).get(0), myOptions);
+
+            }
+//        });
+    </script>
+
+{% endblock %}

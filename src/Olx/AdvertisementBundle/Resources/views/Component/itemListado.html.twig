@@ -1,0 +1,31 @@
+<div class=" bottom-product" style="border:1px solid green; padding-top: 5px">
+    <div class="col-md-6 bottom-cd simpleCart_shelfItem" >
+        <div class="product-at ">
+            <a href="#"><img class="img-responsive" src="{{ item.getThumb() }}" alt="">
+                <div class="pro-grid">
+                    <span class="buy-in">Ver Mas >></span>
+                </div>
+            </a>
+        </div>
+        <p class="tun"><span>{{ item.getResumeTitle() }}</span><br>{{ item.getCondition()|upper }} - {{ item.getDate() }}</p>
+        <div class="ca-rt">
+            <a href="#" class="item_add"><p class="number item_price"><i> </i>{{ item.getPrice() }}</p></a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="col-md-6 bottom-cd simpleCart_shelfItem" >
+        <div class="product-at ">
+            <div id='map_canvas{{ item.id }}' style="width:100%; height:350px;"></div>
+        </div>
+        <p>{{ item.getTitle() }} - {{ item.getLocation() }}</p>
+        <p style="color:grey">{{ item.getDescription()[:150] }}...</p>
+        <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"> </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            load_map({{ item.getId() }}, '{{ item.getCoordinates().latitude }}', '{{ item.getCoordinates().longitude }}');
+        });
+    </script>
+</div>
